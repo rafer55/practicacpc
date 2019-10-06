@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 Route::view('/inicio','home')->name('paginicio');
 Route::view('/contacto','contact')->name('contactanos');
-Route::get('/contactpost', 'consultas@store')->name('contactpost');
+Route::get('/contactpost', 'consultascontroller@store')->name('contactpost');

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\consultas;
 
-class consultas extends Controller
+class consultascontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -39,6 +40,8 @@ class consultas extends Controller
         $consultas->email = $request->email;
         $consultas->asunto = $request->asunto;
         $consultas->mensaje = $request->mensaje;
+
+        $consultas->save();
     }
 
     /**
