@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::view('/inicio','home')->name('paginicio');
+Route::view('/contacto','contact')->name('contactanos');
