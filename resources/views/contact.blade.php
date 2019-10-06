@@ -23,7 +23,7 @@
             <div class="col-sm-6"><textarea name="mensaje" id="mensaje" cols="40" rows="5"></textarea></div>
         </div>
         <div class="col-sm-4 col-md-offset-6" style="padding-bottom: 10px">
-            <input type="submit" value="Enviar " class="btn-primary">
+            <input type="submit" value="Enviar" class="btn-primary">
         </div>
     </div>
     </form>
