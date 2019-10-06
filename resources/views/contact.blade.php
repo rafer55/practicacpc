@@ -4,7 +4,7 @@
     <div style="padding: 20px; text-align: center">
     <h1>pagina de contactanos</h1>
     </div>
-    <form action="" method="post">
+    <form action="{{ route('contactpost') }}" method="post">
     <div class="row">
         <div class="col-sm-8 col-md-offset-4" style="padding-bottom: 10px">
             <div class="col-sm-3"><label for="nombre">Ingresar nombre</label></div>
