@@ -16,7 +16,7 @@ class CreateConsultasTable extends Migration
         Schema::create('consultas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
-            $table->string('email');
+            $table->string('email', 60);
             $table->string('asunto');
             $table->string('mensaje');
             $table->timestamps();

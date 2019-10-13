@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\consultas;
+use App\consultas;
 
 class consultascontroller extends Controller
 {
@@ -36,12 +36,19 @@ class consultascontroller extends Controller
     public function store(Request $request)
     {
         //
+        $consultas = new consultas;
         $consultas->nombre = $request->nombre;
         $consultas->email = $request->email;
         $consultas->asunto = $request->asunto;
         $consultas->mensaje = $request->mensaje;
 
         $consultas->save();
+        return view('contact');
+    }
+
+    public function read()
+    {
+
     }
 
     /**
