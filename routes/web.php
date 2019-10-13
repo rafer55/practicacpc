@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::view('/inicio','home')->name('paginicio');
 Route::view('/contacto','contact')->name('contactanos');
 Route::post('/contactpost', 'consultascontroller@store')->name('contactpost');
+Route::get('/listadeconsultas','consultascontroller@read')->name('listaconsultas');

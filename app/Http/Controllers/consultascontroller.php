@@ -48,7 +48,8 @@ class consultascontroller extends Controller
 
     public function read()
     {
-
+        $consultas = consultas::all();
+        return view('listconsultas',compact("consultas"));
     }
 
     /**
