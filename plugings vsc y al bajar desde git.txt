@@ -1,0 +1,11 @@
+https://marketplace.visualstudio.com/items?itemName=MehediDracula.php-namespace-resolver
+https://marketplace.visualstudio.com/items?itemName=codingyu.laravel-goto-view
+https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme
+https://marketplace.visualstudio.com/items?itemName=cjhowe7.laravel-blade
+https://marketplace.visualstudio.com/items?itemName=ryannaddy.laravel-artisan
+https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel5-snippets
+
+
+en la consola (cone esto funciona la migracion desde git) 
+cp .env.example .env //esto replica el archivo env
+php artisan key:generate //genera una nueva api key
