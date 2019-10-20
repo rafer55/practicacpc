@@ -71,7 +71,9 @@ class consultascontroller extends Controller
      */
     public function edit($id)
     {
-        //
+        $consultas = consultas::findorFail($id);
+        return view('editconsulta',compact('consultas'));
+
     }
 
     /**
@@ -84,6 +86,9 @@ class consultascontroller extends Controller
     public function update(Request $request, $id)
     {
         //
+        $consultas = consultas::findorFail($id);
+        $consultas -> update($request->all());
+        return redirect('listadeconsultas');
     }
 
     /**
@@ -95,5 +100,8 @@ class consultascontroller extends Controller
     public function destroy($id)
     {
         //
+        $consultas = consultas::findorFail($id);
+        $consultas -> delete();
+        return redirect('listadeconsultas');
     }
 }

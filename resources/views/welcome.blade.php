@@ -87,7 +87,7 @@
                 <div class="links">
                     <a href="{{ route('paginicio') }}">Inicio</a>
                     <a href="{{ route('contactanos') }}">Contactanos</a>
-                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="{{ route('listaconsultas') }}">Lista de Consultas</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
