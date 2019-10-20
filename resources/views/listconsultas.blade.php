@@ -28,7 +28,7 @@
                 <td class="filas"> {{$consulta -> email}} </td>
                 <td class="filas"> {{$consulta -> asunto}} </td>
                 <td class="filas"> {{$consulta -> mensaje}} </td>
-                <td class="filas"><a href="{{$consulta -> id}}" class="btn btn-primary">Editar</a><a href="{{$consulta -> id}}" class="btn btn-danger" style="margin-left: 10px">Eliminar</a></td>
+                <td class="filas"><a href="{{$consulta -> id}}" class="btn btn-primary d-inline">Editar</a><a href="{{$consulta -> id}}" class="btn btn-danger d-inline" style="margin-left: 10px">Eliminar</a></td>
                 </tr>
             @endforeach
             </table>
