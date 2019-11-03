@@ -16,7 +16,7 @@ class ClientesController extends Controller
     {
         //
         $clientes = clientes::all();
-        return ($clientes);
+        return response(json_encode($clientes))->header("Access-Control-Allow-Origin", "http://localhost:8080");
     }
 
     /**
