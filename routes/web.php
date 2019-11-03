@@ -21,3 +21,4 @@ Route::get('/listadeconsultas','consultascontroller@read')->name('listaconsultas
 Route::get('/editconsult/{id}', 'consultascontroller@edit');
 Route::post('updateconsulta/{id}', 'consultascontroller@update')->name('updateconsulta');
 Route::get('deleteconsulta/{id}', 'consultascontroller@destroy');
+Route::resource('clientes', 'ClientesController');
