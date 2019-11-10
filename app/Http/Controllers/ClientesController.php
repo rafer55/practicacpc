@@ -44,7 +44,7 @@ class ClientesController extends Controller
         $clientes->email = $request->email;
         $clientes->telefono = $request->telefono;
         $clientes->save();
-        return("Ingresado con Exito");
+        return response ("Ingresado con Exito")->header("Access-Control-Allow-Origin", "http://localhost:8080");;
     }
 
     /**

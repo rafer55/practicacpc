@@ -1,35 +1,43 @@
-window.addEventListener("load", cargarevento);
-function cargarevento(){  
-   fetch("http://localhost:8000/clientes",{
-        method:"GET",
-      //  header: cabecera
-    }).catch(error=>console.error(error))
-    .then(rest=>rest.json())
-    .then(response=>{
-        console.log(response);
-        //ingresarapi();
-       // mapear(response);
-        var respuesta = response.map(function(reg){
-            return reg.nombre;
-        });
-        console.log(respuesta);
-        mapear(respuesta);
-        
-    });    
+window.addEventListener("load", loadEvents);
+function loadEvents(){
+    let url = 'http://localhost:8000/clientes';
+    fetch(url, {
+        method: 'GET'
+    }).then(res=> res.json())
+    .then(response =>{
+        mapear(response);
+        sendPost();
+    })
 }
-// function ingresarapi(){
-//     var fomulario = document.getElementById("mainform");
-//     formulario.addEventListener("submit")
-// }
+function mapear(res){
+    res.map(registro =>{
+        datos.innerHTML += `<tr>
+        <td>${registro.nombre}</td>
+        <td>${registro.apellido}</td>
+        <td>${registro.email}</td>
+        <td>${registro.telefono}</td>
+        <td><button class="btn btn-secondary" value="${registro.id}">Editar</button></td>
+        <td><button class="btn btn-danger" value="${registro.id}">Editar</button></td>
+        </tr>`;
+    })
+}
 
-function mapear(respuesta){
-    var registros= respuesta;
-    var tabla = document.getElementById("regis");
-    Map(registros=>function(registro){
-        tabla.nombre.innerHTML=registro.nombre;
-        tabla.apellido.innerHTML=registro.apellido;
-        tabla.email.innerHTML=registro.email;
-        tabla.telefono.innerHTML=registro.telefono;
-    });
-    //console.log(response.legth);
-}
+/* ----- POST section----- */
+function sendPost(){
+    
+    var formulario = document.getElementById('form');
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        let data = new FormData(formulario);
+        let url = 'http://localhost:8000/clientes';
+        console.log(data);
+        fetch(url, {
+            method: 'POST',
+            body: data
+        }).then(res =>res.text())
+        .then(response =>{
+            console.log(response);
+            formulario.reset();
+        })
+})}
+/* ----- End POST section----- */
