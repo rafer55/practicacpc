@@ -4,7 +4,8 @@ const app = new Vue({
         titulo: "mi primer componente de vue",
         actividades:[],
         nuevaActividad:'',
-        actividadActual:''
+        actividadActual:'',
+        actividadactualizada:''
     },
     methods:{
         agregarActividad: function(){
@@ -19,11 +20,16 @@ const app = new Vue({
            this.actividades.splice(index,1);
         },
         actualizarActividad: function(index){
+            //carga la actividad seleccionada al form
             let datos = JSON.parse(localStorage.getItem('actividades'));
             this.actividadActual = datos[index];
-            //datos.splice(index,1);
-            //localStorage.setItem('actividades',JSON.stringify(datos));
-            //this.actividades.splice(index,1);
+         },
+         actualizaActividad: function(index){
+             //actualizar la actividad en local storage y data
+            let datos = JSON.parse(localStorage.getItem('actividades'));
+            //datos[index]= this.actividadactualizada;
+            //console.log(datos[index]);
+
          }
     },
     create: function(){

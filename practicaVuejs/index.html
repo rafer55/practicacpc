@@ -26,8 +26,12 @@
                 <div class="col-4">
                         <h4>Agregar Actividad</h4>
                         <input type="text" class="form-control" v-model="nuevaActividad" >
-                        <button class="btn btn-block btn-primary" @click="agregarActividad">Agregar</button>
-                        <input type="text" class="form-control" id="actividadActual" v-bind:value="{actividadActual}" >
+                        <button class="btn btn-block btn-primary" @click="agregarActividad">Agregar</button>                        
+                </div>
+                <div class="col-4">
+                        <h4>Actualizar Actividad</h4>
+                        <input type="text" class="form-control" id="actividadActual" v-if="actividadActual" >
+                        <button class="btn btn-block btn-warning" @click="actualizaActividad(index)">Actualizar</button>
                 </div>
             </div>
         </div>
