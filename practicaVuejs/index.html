@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-4">
                         <h4>Actualizar Actividad</h4>
-                        <input type="text" class="form-control" id="actividadActual" v-if="actividadActual" >
+                        <input type="text" class="form-control" id="actividadActual" :value="actividadActual" >
                         <button class="btn btn-block btn-warning" @click="actualizaActividad(index)">Actualizar</button>
                 </div>
             </div>
