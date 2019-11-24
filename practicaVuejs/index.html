@@ -25,8 +25,9 @@
             <div class="row">
                 <div class="col-4">
                         <h4>Agregar Actividad</h4>
-                        <input type="text" class="form-control" v-model="nuevaActividad">
+                        <input type="text" class="form-control" v-model="nuevaActividad" >
                         <button class="btn btn-block btn-primary" @click="agregarActividad">Agregar</button>
+                        <input type="text" class="form-control" id="actividadActual" v-bind:value="{actividadActual}" >
                 </div>
             </div>
         </div>
@@ -38,12 +39,14 @@
                             <tr>
                                 <th>Actividades</th>
                                 <th>Borrar</th>
+                                <th>Actualizar</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr v-for="(actividad, index) in actividades">
                                 <td> {{actividad}} </td>
                                 <td> <button class="btn btn-danger" @click="eliminarActividad(index)">Borrar</button> </td>
+                                <td> <button class="btn btn-warning" @click="actualizarActividad(index)">Actalizar</button> </td>
                             </tr>
                         </tbody>
                     </table>
